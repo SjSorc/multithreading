@@ -1,17 +1,15 @@
-package producer.consumer;
+package synchroniz.producer.consumer;
 
 public class Producer extends Thread{
 	
 	private SharedResource sharedResource;
 	private int start;
 	private int end;
-	private int executionTime;
 	
-	public Producer(SharedResource sharedResource, int start, int end, int executionTime){
+	public Producer(SharedResource sharedResource, int start, int end){
 		this.sharedResource = sharedResource;
 		this.start = start;
 		this.end = end;
-		this.executionTime = executionTime;
 	}
 	
 	@Override
@@ -28,7 +26,7 @@ public class Producer extends Thread{
 	public void produce(Integer element){
 		try {
 			
-			Thread.sleep(1000 * this.executionTime);
+			Thread.sleep(1000 * 1);
 			
 			System.out.println("Producer: producing => " + element);
 			this.sharedResource.addElement(element);

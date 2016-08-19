@@ -6,17 +6,17 @@ public class Run {
 		
 		SharedResource resource = new SimpleSharedResource();
 		
-		Producer p1 = new Producer(resource, 1, 5);
-		Producer p2 = new Producer(resource, 94, 105);
+		Producer p1 = new Producer(resource, 1, 5, 1);
+		Producer p2 = new Producer(resource, 94, 99, 1);
 		
-		Consumer c = new Consumer(resource);
+		//Consumer c = new Consumer(resource);
 		
 		p1.start();
 		p2.start();
 		
 		try {
 			Thread.sleep(1000 *2);
-			c.start();
+			//c.start();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

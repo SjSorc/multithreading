@@ -1,4 +1,4 @@
-package producer.consumer;
+package synchroniz.producer.consumer;
 
 import java.util.*;
 
@@ -10,8 +10,8 @@ public class SimpleSharedResource implements SharedResource{
 		this.queue = new LinkedList<Integer>();
 	}
 	
-	@Override	
-	public synchronized void addElement(Integer element){
+	@Override
+	public void addElement(Integer element){
 		this.queue.add(element);
 	}
 	
