@@ -1,15 +1,14 @@
-package synchroniz.producer.consumer;
+package wait.producer.consumer;
 
 public class Run {
 
 	public static void main(String[] args) {
 
 		/**
+		 * Here producers produce every 1 second and consumer consumes every 2
+		 * seconds
+		 * 
 		 * Q. What if the Producers try to insert at the same time?
-		 * 
-		 * Here either it will produce or consume
-		 * 
-		 * EG. - Vector/ Hashtable - all methods are synchronized
 		 */
 
 		SharedResource resource = new SimpleSharedResource();

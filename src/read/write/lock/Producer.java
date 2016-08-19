@@ -1,4 +1,4 @@
-package synchroniz.producer.consumer;
+package read.write.lock;
 
 public class Producer extends Thread {
 

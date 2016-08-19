@@ -6,20 +6,21 @@ public class Run {
 		
 		SharedResource resource = new SimpleSharedResource();
 		
-		Producer p1 = new Producer(resource, 1, 5, 1);
-		Producer p2 = new Producer(resource, 94, 99, 1);
+		Producer p1 = new Producer(resource, 1, 5);
+		Producer p2 = new Producer(resource, 94, 97);
 		
-		//Consumer c = new Consumer(resource);
+		Consumer c = new Consumer(resource);
 		
 		p1.start();
 		p2.start();
 		
-		try {
+		try{
 			Thread.sleep(1000 *2);
-			//c.start();
-		} catch (InterruptedException e) {
+			c.start();
+		} catch (InterruptedException e){
 			e.printStackTrace();
 		}
+		
 
 	   /**
 	    * Here producers produce every 1 second and consumer consumes every 2 seconds

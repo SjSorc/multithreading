@@ -1,4 +1,4 @@
-package producer.consumer;
+package wait.producer.consumer;
 
 public class Producer extends Thread{
 	
@@ -30,6 +30,7 @@ public class Producer extends Thread{
 			
 			System.out.println("Producer: producing => " + element);
 			this.sharedResource.addElement(element);
+			this.notify();
 		
 		} catch (InterruptedException e) {
 			e.printStackTrace();
